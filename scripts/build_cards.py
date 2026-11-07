@@ -126,7 +126,7 @@ class Card:
             self.e.append(f'<text x="44" y="{self.y}" font-size="19" fill="{SUB}">{esc(more)}</text>')
         self.y += 26
         h = self.y; body = "".join(self.e)
-        return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" '
+        return (f'<svg xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" viewBox="0 0 {W} {h}" width="{W}" '
                 f'height="{h}"><rect x="0" y="0" width="{W}" height="{h}" fill="{CREAM}"/>{body}</svg>')
 
 
