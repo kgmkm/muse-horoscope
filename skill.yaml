@@ -1,0 +1,5 @@
+name: "muse_horoscope"
+title: "Muse Horoscope"
+description: "Compute a natal chart with openephem (MIT), remember it, and produce light-touch entertainment readings as vertical cards: a basics card (Sun, Moon, Ascendant), a detail card (aspects plus Uranian / German hypothetical bodies), and a daily card (bi-wheel transits with a 1-3 star rating and one Uranian deep-dive point at most)."
+category: "Fun and social"
+include_in_prompt: false

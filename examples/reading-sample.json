@@ -1,0 +1,36 @@
+{
+  "lang": "en",
+  "name": "Alex Sample",
+  "muse_name": "Muse",
+  "natal_sub": "Alex Sample - 15 Jun 1990 14:30 - Tokyo (fictional sample)",
+  "detail_sub": "Alex Sample - the aspect grid, Uranian points included",
+  "daily_sub": "Alex Sample - inner: natal chart / outer: today's sky",
+  "basic": {
+    "sun": {"head": "Sun in Gemini (9th house)", "lines": ["Curiosity points outward and upward: learning,", "connecting and publishing keep you centred."]},
+    "moon": {"head": "Moon in Pisces (1st house)", "lines": ["Feelings arrive first and quietly. You need soft", "edges and time near water or music to reset."]},
+    "asc": {"head": "Ascendant (rising point): Scorpio", "lines": ["The first impression is reserved and intense.", "You open up slowly, and then completely."]},
+    "summary": ["A connector of ideas with a private, feeling inner life.", "The contrast between the open, quick surface and the", "deep water underneath is the charm of this chart."]
+  },
+  "detail": {
+    "top": [
+      {"head": "Jupiter trine Pluto (orb 0.42)", "lines": ["Growth and depth pull in the same direction.", "Big changes tend to land as upgrades."]},
+      {"head": "Saturn sextile MeanLilith (orb 0.87)", "lines": ["Discipline gives the wild part of you a frame", "instead of a cage."]},
+      {"head": "Neptune sextile Pluto (orb 1.68)", "lines": ["A generational background hum: dreams and", "transformation move together, slowly."]}
+    ],
+    "uranian": [
+      {"head": "Sun/MC midpoint = Neptune (orb 0.24)", "lines": ["Your public direction is coloured by imagination.", "Work with images, sound or story fits the axis."]},
+      {"head": "Sun/MC midpoint = Vulcanus (orb 1.36)", "lines": ["When the direction is set, the output is", "out of scale. Bursts, not drips."]}
+    ]
+  },
+  "daily": {
+    "date_title": "2026-11-08 (Sun)",
+    "stars": 3,
+    "oneline": "Ideas click into place today",
+    "points": [
+      {"head": "Transit Mercury sextile natal Uranus (orb 0.01)", "lines": ["A very tight, bright contact. News, tools and", "short trips sparkle. Say yes to the new app."]},
+      {"head": "Transit Sun conjunct natal Pluto (orb 0.10)", "lines": ["Depth day. One honest conversation can move", "something that was stuck for months."]}
+    ],
+    "deep": ["Transit Sun trine natal Vulcanus (orb 0.67): the deep-dive", "point. A day when focused effort produces outsized", "results - pick one target and push."],
+    "lucky": ["Try the tool you have been postponing / Write the idea down before noon"]
+  }
+}

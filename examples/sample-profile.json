@@ -1,0 +1,10 @@
+{
+  "name": "Alex Sample",
+  "birth_date": "1990-06-15",
+  "birth_time": "14:30",
+  "birth_place": "Tokyo (fictional sample)",
+  "lat": 35.6762,
+  "lon": 139.6503,
+  "tz": "Asia/Tokyo",
+  "house_system": "Placidus"
+}
