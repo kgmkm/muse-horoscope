@@ -30,6 +30,7 @@ LABELS = {
         "oneline": "のひとこと", "oneline_note": "星の配置と、あなたのこれまでの話を重ねて読みました",
         "deep": "今日の深掘りワンポイント（ドイツ式架空天体）", "lucky": "ラッキーアクション",
         "footer": "計算: openephem / ephemvis (MIT) ・ Placidus ・ トロピカル ・ エンタメとしてお楽しみください",
+        "privacy": "個人情報の為SNS共有はお控えください",
         "more": "くわしい分析はチャット欄に続きます",
     },
     "en": {
@@ -42,6 +43,7 @@ LABELS = {
         "oneline": "'s one-liner", "oneline_note": "Read from the stars, and from what you have told me",
         "deep": "Today's deep dive (German hypothetical bodies)", "lucky": "Lucky action",
         "footer": "Calculated with openephem / ephemvis (MIT) - Placidus - Tropical - For entertainment",
+        "privacy": "Please do not share on social media: a chart can reveal your birth data.",
         "more": "The full reading continues in the chat",
     },
 }
@@ -116,11 +118,14 @@ class Card:
         self.e.append(f'<text x="176" y="{cy+72}" font-size="19" fill="{SUB}">{esc(labels["oneline_note"])}</text>')
         self.y = cy + 88
 
-    def footer(self, t, more=""):
+    def footer(self, t, more="", privacy=""):
         self.y += 34
         self.e.append(f'<line x1="44" y1="{self.y}" x2="{W-44}" y2="{self.y}" stroke="{LINE}" stroke-width="2"/>')
         self.y += 34
         self.e.append(f'<text x="44" y="{self.y}" font-size="19" fill="{SUB}">{esc(t)}</text>')
+        if privacy:
+            self.y += 28
+            self.e.append(f'<text x="44" y="{self.y}" font-size="19" font-weight="bold" fill="#a34d3d">{esc(privacy)}</text>')
         if more:
             self.y += 28
             self.e.append(f'<text x="44" y="{self.y}" font-size="19" fill="{SUB}">{esc(more)}</text>')
@@ -159,7 +164,7 @@ def main():
             c.bullet(b[key]["head"], b[key]["lines"])
         c.heading(L["so_what"])
         c.para(b["summary"])
-        open(f"{args.out}/card-1-basic.svg", "w").write(c.footer(L["footer"], L["more"]))
+        open(f"{args.out}/card-1-basic.svg", "w").write(c.footer(L["footer"], L["more"], L.get("privacy", "")))
         print("card-1-basic.svg")
     if args.which in ("all", "detail") and "detail" in r:
         d = r["detail"]
@@ -172,7 +177,7 @@ def main():
         c.heading(L["uranian"])
         for item in d["uranian"]:
             c.bullet(item["head"], item["lines"])
-        open(f"{args.out}/card-2-detail.svg", "w").write(c.footer(L["footer"], L["more"]))
+        open(f"{args.out}/card-2-detail.svg", "w").write(c.footer(L["footer"], L["more"], L.get("privacy", "")))
         print("card-2-detail.svg")
     if args.which in ("all", "daily") and "daily" in r:
         d = r["daily"]
@@ -189,7 +194,7 @@ def main():
         if d.get("lucky"):
             c.heading(L["lucky"])
             c.para(d["lucky"])
-        open(f"{args.out}/card-3-daily.svg", "w").write(c.footer(L["footer"]))
+        open(f"{args.out}/card-3-daily.svg", "w").write(c.footer(L["footer"], "", L.get("privacy", "")))
         print("card-3-daily.svg")
 
 
